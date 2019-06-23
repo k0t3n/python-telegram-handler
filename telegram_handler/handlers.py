@@ -36,7 +36,7 @@ class TelegramHandler(logging.Handler):
 
     @classmethod
     def format_url(cls, token, method):
-        return 'http://botapi.antrekod.ru/bot%s/%s' % (token, method)
+        return 'https://api.telegram.org/bot%s/%s' % (token, method)
 
     def get_chat_id(self):
         response = self.request('getUpdates')
